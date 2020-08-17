@@ -8,26 +8,15 @@
     "douban docs",
     "zce"
   ],
-  "homepage": "https://github.com/zce/douban-api-docs#readme",
-  "bugs": {
-    "url": "https://github.com/zce/douban-api-docs/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/zce/douban-api-docs.git"
-  },
+  "repository": "zce/douban-api-docs",
   "license": "MIT",
   "author": {
     "name": "zce",
     "email": "w@zce.me",
     "url": "https://zce.me"
   },
-  "directories": {
-    "doc": "docs"
-  },
   "scripts": {
-    "commit": "git-cz",
-    "lint": "prettier --write **/*.md "
+    "format": "prettier --write **/*.md"
   },
   "husky": {
     "hooks": {
@@ -41,23 +30,13 @@
     ]
   },
   "lint-staged": {
-    "*.md": [
-      "yarn lint",
-      "git add"
-    ]
-  },
-  "config": {
-    "commitizen": {
-      "path": "cz-conventional-changelog"
-    }
+    "*.md": "prettier --write"
   },
   "devDependencies": {
-    "@commitlint/cli": "8.3.5",
-    "@commitlint/config-conventional": "8.3.4",
-    "commitizen": "4.0.3",
-    "cz-conventional-changelog": "3.1.0",
-    "husky": "4.2.3",
-    "lint-staged": "10.0.10",
-    "prettier": "2.0.1"
+    "@commitlint/cli": "latest",
+    "@commitlint/config-conventional": "latest",
+    "husky": "latest",
+    "lint-staged": "latest",
+    "prettier": "latest"
   }
 }
